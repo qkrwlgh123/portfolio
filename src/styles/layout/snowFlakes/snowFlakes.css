@@ -1,0 +1,99 @@
+.snowflake {
+  --size: 1vw;
+  width: var(--size);
+  height: var(--size);
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: -5vh;
+}
+@keyframes snowfall {
+  0% {
+    opacity: 0.2;
+    transform: translate3d(var(--left-ini), 0, 0);
+  }
+  100% {
+    transform: translate3d(var(--left-end), 110vh, 0);
+    opacity: 0;
+  }
+}
+.snowflake:nth-child(1) {
+  --size: 1vw;
+  --left-ini: -8vw;
+  --left-end: 3vw;
+  left: 21vw;
+  animation: snowfall 12s linear infinite;
+  animation-delay: -10s;
+}
+.snowflake:nth-child(2) {
+  --size: 0.6vw;
+  --left-ini: 2vw;
+  --left-end: 10vw;
+  left: 17vw;
+  animation: snowfall 9s linear infinite;
+  animation-delay: -9s;
+}
+.snowflake:nth-child(3) {
+  --size: 0.8vw;
+  --left-ini: -5vw;
+  --left-end: -7vw;
+  left: 78vw;
+  animation: snowfall 12s linear infinite;
+  animation-delay: -1s;
+}
+.snowflake:nth-child(4) {
+  --size: 0.6vw;
+  --left-ini: -1vw;
+  --left-end: -9vw;
+  left: 57vw;
+  animation: snowfall 6s linear infinite;
+  animation-delay: -9s;
+}
+.snowflake:nth-child(5) {
+  --size: 0.6vw;
+  --left-ini: 9vw;
+  --left-end: -1vw;
+  left: 39vw;
+  animation: snowfall 10s linear infinite;
+  animation-delay: -3s;
+}
+.snowflake:nth-child(6) {
+  --size: 0.8vw;
+  --left-ini: 3vw;
+  --left-end: -6vw;
+  left: 60vw;
+  animation: snowfall 10s linear infinite;
+  animation-delay: -1s;
+}
+.snowflake:nth-child(7) {
+  --size: 1vw;
+  --left-ini: -1vw;
+  --left-end: -4vw;
+  left: 89vw;
+  animation: snowfall 6s linear infinite;
+  animation-delay: -8s;
+}
+.snowflake:nth-child(8) {
+  --size: 1vw;
+  --left-ini: -4vw;
+  --left-end: -7vw;
+  left: 33vw;
+  animation: snowfall 11s linear infinite;
+  animation-delay: -2s;
+}
+.snowflake:nth-child(9) {
+  --size: 1vw;
+  --left-ini: -4vw;
+  --left-end: -4vw;
+  left: 78vw;
+  animation: snowfall 10s linear infinite;
+  animation-delay: -5s;
+}
+.snowflake:nth-child(10) {
+  --size: 0.6vw;
+  --left-ini: -3vw;
+  --left-end: 1vw;
+  left: 73vw;
+  animation: snowfall 15s linear infinite;
+  animation-delay: -7s;
+}
