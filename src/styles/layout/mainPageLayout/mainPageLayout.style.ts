@@ -4,7 +4,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(#123, #111);
+  background: linear-gradient(to left, #123, #111);
 `;
 
 const InnerBox = styled.div`
