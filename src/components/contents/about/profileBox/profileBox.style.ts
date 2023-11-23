@@ -7,8 +7,9 @@ const ProfileBoxContainer = styled.div`
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   padding: 60px 0px 60px 60px;
   background-color: #ececec;
+  border-radius: 6px;
   h2 {
-    color: black;
+    color: #000000;
   }
 `;
 

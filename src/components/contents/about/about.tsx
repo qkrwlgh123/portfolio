@@ -11,9 +11,7 @@ const About = () => {
         <Style.TitleBox>
           <TypeIt
             options={{
-              strings: [
-                '안녕하세요 : ) <br/>Output으로 증명하는 Frontend 개발자 박지호입니다.',
-              ],
+              strings: ['안녕하세요 : ) <br/>Frontend 개발자 박지호입니다.'],
               speed: 100,
               loop: true,
               loopDelay: 2500,

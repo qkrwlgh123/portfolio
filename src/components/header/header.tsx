@@ -18,8 +18,10 @@ const Header = () => {
   return (
     <Style.HeaderBox scrollPosition={scrollPosition}>
       <Style.InnerBox>
-        <div>로고</div>
-        <Style.MenusBox scrollPosition={scrollPosition}>
+        <Style.LogoBox>
+          <button>PARK JIHO</button>
+        </Style.LogoBox>
+        <Style.MenusBox>
           <ul>
             <li>
               <button>About</button>

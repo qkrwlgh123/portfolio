@@ -1,14 +1,18 @@
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
+import './fonts/font.css';
 
 const GlobalStyles = createGlobalStyle` 
   ${reset} 
-
+    body {
+        font-family: 'NanumGothic-Regular';
+    }
     a{
         text-decoration: none;
         color: inherit;
     }
     *{
+        font-family: 'NanumGothic-Regular';
         box-sizing: border-box;
     }
     input, textarea { 
