@@ -8,6 +8,7 @@ import Contact from '../components/contents/contact/contact';
 import Career from '../components/contents/career/career';
 import Modal from '../components/modal/modal';
 import { ModalPortal } from '../components/modal/mordalPortal';
+import Footer from '../components/footer/footer';
 
 const MainPage = () => {
   return (
