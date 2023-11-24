@@ -8,7 +8,7 @@ const Container = styled.div`
 `;
 
 const InnerBox = styled.div`
-  margin-top: 180px;
+  margin-top: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -30,6 +30,9 @@ const Header = () => {
               <button>Skills</button>
             </li>
             <li>
+              <button>Career</button>
+            </li>
+            <li>
               <button>Projects</button>
             </li>
             <li>

@@ -8,6 +8,7 @@ const ProfileBoxContainer = styled.div`
   padding: 60px 0px 60px 60px;
   background-color: #ececec;
   border-radius: 6px;
+  z-index: -1;
   h2 {
     color: #000000;
   }

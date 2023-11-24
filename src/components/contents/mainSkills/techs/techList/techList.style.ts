@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
 const TechListContainer = styled.div`
-  margin-top: 50px;
+  margin-top: 100px;
   display: grid;
-  grid-template-rows: auto auto;
-  grid-template-columns: auto auto;
-  gap: 100px;
-  width: 70%;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 50px;
+  row-gap: 65px;
+
+  width: 80%;
 `;
 
 export default { TechListContainer };

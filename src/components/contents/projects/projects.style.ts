@@ -9,7 +9,7 @@ const ProjectsContainer = styled.div`
   padding-bottom: 100px;
   border-bottom: 2px dashed rgb(206, 184, 184);
   h2 {
-    color: #fff;
+    color: #ececec;
     font-size: 36px;
   }
 `;

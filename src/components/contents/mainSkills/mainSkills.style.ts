@@ -9,7 +9,7 @@ const MainSkillsContainer = styled.div`
   flex-direction: column;
   align-items: center;
   h2 {
-    color: #fff;
+    color: #ececec;
     font-size: 36px;
   }
 `;

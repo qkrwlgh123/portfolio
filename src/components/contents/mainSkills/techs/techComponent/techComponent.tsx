@@ -17,11 +17,11 @@ const TechComponent = ({
       <Style.TitleBox>
         <span>{title}</span>
       </Style.TitleBox>
-      <div>
+      <Style.SentencesBox>
         {sentences.map((sentence, index) => (
-          <p key={index}>{sentence}</p>
+          <span key={index}>{sentence}</span>
         ))}
-      </div>
+      </Style.SentencesBox>
     </Style.TechBox>
   );
 };

@@ -2,6 +2,7 @@ import Style from './about.style';
 import TypeIt from 'typeit-react';
 import ProfileBox from './profileBox/profileBox';
 import SnowFlakes from '../../../styles/layout/snowFlakes/snowFlakes';
+import { INTRO_SENTENCES } from './introSentences';
 
 const About = () => {
   return (
@@ -13,20 +14,16 @@ const About = () => {
             options={{
               strings: ['안녕하세요 : ) <br/>Frontend 개발자 박지호입니다.'],
               speed: 100,
-              loop: true,
-              loopDelay: 2500,
+              loop: false,
               waitUntilVisible: true,
             }}
           />
         </Style.TitleBox>
 
         <Style.IntroSentencesBox>
-          <p>블라블라블라블라.</p>
-          <p>블라블라블라블라.</p>
-          <p>블라블라블라블라.</p>
-          <p>블라블라블라블라.</p>
-          <p>블라블라블라블라.</p>
-          <p>블라블라블라블라.</p>
+          {INTRO_SENTENCES.map((sentence, index) => (
+            <span key={index}>{sentence}</span>
+          ))}
         </Style.IntroSentencesBox>
 
         <ProfileBox />

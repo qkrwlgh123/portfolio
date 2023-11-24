@@ -5,12 +5,16 @@ import Header from '../components/header/header';
 import MainPageLayout from '../styles/layout/mainPageLayout/mainPageLayout';
 import Projects from '../components/contents/projects/projects';
 import Contact from '../components/contents/contact/contact';
+import Career from '../components/contents/career/career';
+import Modal from '../components/modal/modal';
+import { ModalPortal } from '../components/modal/mordalPortal';
 
 const MainPage = () => {
   return (
     <MainPageLayout>
       <About />
       <MainSkills />
+      <Career />
       <Projects />
       <Contact />
     </MainPageLayout>

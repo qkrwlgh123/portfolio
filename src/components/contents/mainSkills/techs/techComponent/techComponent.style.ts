@@ -5,14 +5,13 @@ const TechBox = styled.div<{ isInViewport: boolean }>`
   border: 3px solid #ececec;
   color: #ececec;
   border-radius: 1rem;
-  padding: 52px 32px 32px 32px;
+  padding: 60px 0 30px 30px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  line-height: 1.5;
+  line-height: 2;
   position: relative;
   opacity: ${(props) => (props.isInViewport ? 1 : 0)};
   transition: opacity 3s ease;
+  width: 100%;
 `;
 
 const TitleBox = styled.div`
@@ -25,4 +24,9 @@ const TitleBox = styled.div`
   background: #123;
 `;
 
-export default { TechBox, TitleBox };
+const SentencesBox = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export default { TechBox, TitleBox, SentencesBox };

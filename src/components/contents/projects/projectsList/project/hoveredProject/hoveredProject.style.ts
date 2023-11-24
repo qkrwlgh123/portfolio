@@ -7,7 +7,8 @@ const HoveredProjectBox = styled.div`
   justify-content: center;
   align-items: center;
   position: absolute;
-  background-color: gray;
+  background-color: #000000;
+  opacity: 0.5;
 `;
 
 const InnerBox = styled.div`

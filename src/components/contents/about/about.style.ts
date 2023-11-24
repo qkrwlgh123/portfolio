@@ -21,7 +21,9 @@ const TitleBox = styled.div`
 
 const IntroSentencesBox = styled.div`
   margin-top: 50px;
-  p {
+  display: flex;
+  flex-direction: column;
+  span {
     font-size: 20px;
     font-weight: 400;
   }
