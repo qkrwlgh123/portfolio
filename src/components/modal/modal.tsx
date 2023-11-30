@@ -12,15 +12,20 @@ const Modal = (props: ProjectDataType) => {
         modalRef.current &&
         !modalRef.current.contains(e.target as Node)
       ) {
-        // 이벤트가 발생한 노드가 모달 컴포넌트 내부에 존재하지 않는다면 close
         props.handleOpenModal!();
       }
     };
-
-    // 이벤트 리스너를 document 전체에 붙여줌
+    document.body.style.cssText = `
+    position: fixed; 
+    top: -${window.scrollY}px;
+    overflow-y: scroll;
+    width: 100%;`;
     document.addEventListener('mousedown', closeModal);
 
     return () => {
+      const scrollY = document.body.style.top;
+      document.body.style.cssText = '';
+      window.scrollTo(0, parseInt(scrollY || '0', 10) * -1);
       document.removeEventListener('mousedown', closeModal);
     };
   }, []);
@@ -42,31 +47,53 @@ const Modal = (props: ProjectDataType) => {
           </Style.ImageBox>
           <Style.TextsContainer>
             <Style.IntroduceTextBox>
-              <p>{props.introduce}</p>
+              <p dangerouslySetInnerHTML={{ __html: props.introduce }} />
+              {props.whatIDone && (
+                <Style.WhatIDoneList>
+                  {props.whatIDone.map((done) => (
+                    <li key={done}>{done}</li>
+                  ))}
+                </Style.WhatIDoneList>
+              )}
+
+              <Style.LearnedTitle>What I learned...</Style.LearnedTitle>
+              <ul>
+                {props.learned.map((sentence, index) => (
+                  <li key={index}>
+                    <span>{sentence}</span>
+                  </li>
+                ))}
+              </ul>
             </Style.IntroduceTextBox>
             <Style.UsedTechsBox>
-              <Style.TopicBox>
-                <Style.SubjectBox>
-                  <span>
-                    <FaCheck />
-                    주요 기능
-                  </span>
-                </Style.SubjectBox>
-                <Style.ContentBox>
-                  <span>{props.mainFuncs}</span>
-                </Style.ContentBox>
-              </Style.TopicBox>
-              <Style.TopicBox>
-                <Style.SubjectBox>
-                  <span>
-                    <FaCheck />
-                    Github
-                  </span>
-                </Style.SubjectBox>
-                <Style.ContentBox>
-                  <a href={props.github}>{props.github?.slice(8)}</a>
-                </Style.ContentBox>
-              </Style.TopicBox>
+              {props.mainFuncs && (
+                <Style.TopicBox>
+                  <Style.SubjectBox>
+                    <span>
+                      <FaCheck />
+                      주요 기능
+                    </span>
+                  </Style.SubjectBox>
+                  <Style.ContentBox>
+                    <span>{props.mainFuncs}</span>
+                  </Style.ContentBox>
+                </Style.TopicBox>
+              )}
+              {props.github && (
+                <Style.TopicBox>
+                  <Style.SubjectBox>
+                    <span>
+                      <FaCheck />
+                      Github
+                    </span>
+                  </Style.SubjectBox>
+                  <Style.ContentBox>
+                    <a href={props.github} target="_blank">
+                      {props.github?.slice(8)}
+                    </a>
+                  </Style.ContentBox>
+                </Style.TopicBox>
+              )}
               <Style.TopicBox>
                 <Style.SubjectBox>
                   <span>
@@ -75,7 +102,9 @@ const Modal = (props: ProjectDataType) => {
                   </span>
                 </Style.SubjectBox>
                 <Style.ContentBox>
-                  <a href={props.url}>{props.url?.slice(8)}</a>
+                  <a href={props.url} target="_blank">
+                    {props.url?.slice(8)}
+                  </a>
                 </Style.ContentBox>
               </Style.TopicBox>
               <Style.TopicBox>
@@ -89,17 +118,19 @@ const Modal = (props: ProjectDataType) => {
                   <span>{props.frontendStacks}</span>
                 </Style.ContentBox>
               </Style.TopicBox>
-              <Style.TopicBox>
-                <Style.SubjectBox>
-                  <span>
-                    <FaCheck />
-                    Backend
-                  </span>
-                </Style.SubjectBox>
-                <Style.ContentBox>
-                  <span>{props.backendStacks}</span>
-                </Style.ContentBox>
-              </Style.TopicBox>
+              {props.backendStacks && (
+                <Style.TopicBox>
+                  <Style.SubjectBox>
+                    <span>
+                      <FaCheck />
+                      Backend
+                    </span>
+                  </Style.SubjectBox>
+                  <Style.ContentBox>
+                    <span>{props.backendStacks}</span>
+                  </Style.ContentBox>
+                </Style.TopicBox>
+              )}
               <Style.TopicBox>
                 <Style.SubjectBox>
                   <span>

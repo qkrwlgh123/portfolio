@@ -112,6 +112,7 @@ export const PROJECTS_DATA = [
     title: 'Portfolio',
     image: PortfolioImage,
     duration: '2023.11 - 2023.11 (개인 프로젝트)',
+    github: 'https://github.com/qkrwlgh123/portfolio',
     introduce:
       '현재 보여지는 포트폴리오 페이지를 개발하였습니다. 제가 걸어왔던 개발 커리어들을 다시 되돌아보며 <span>무엇을 경험했는지, 그리고 경험들을 통해 어떤 것을 배울 수 있었는 지를 다시 한 번 회고</span>해볼 수 있는 좋은 기회가 된 프로젝트입니다.',
     learned: [
