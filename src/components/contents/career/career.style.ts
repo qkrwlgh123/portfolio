@@ -15,11 +15,31 @@ const InnerContainer = styled.div`
   width: 70%;
   display: flex;
   flex-direction: column;
+  @media (max-width: 750px) {
+    width: 100%;
+  }
 `;
 
 export const CareerContentsBox = styled.div<{ isInViewport: boolean }>`
   h2 {
     font-size: 36px;
+    @media (max-width: 750px) {
+      font-size: 25px;
+    }
+    position: relative;
+    width: fit-content;
+    &::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: ${(props) => (props.isInViewport ? '100%' : '0px')};
+      height: 5px;
+      opacity: ${(props) => (props.isInViewport ? '1' : '0')};
+      transition: all 2500ms ease-in-out;
+      background-color: #3b5279;
+    }
   }
   margin-bottom: 150px;
   opacity: ${(props) => (props.isInViewport ? 1 : 0)};
@@ -41,15 +61,24 @@ export const CompanyInfoBox = styled.div`
   h3 {
     font-size: 28px;
     margin-right: 15px;
+    @media (max-width: 750px) {
+      font-size: 17px;
+    }
   }
   span {
     font-family: 'NanumGothic-ExtraBold';
+    @media (max-width: 750px) {
+      font-size: 13px;
+    }
   }
 `;
 
 export const EducationContentsBox = styled(CareerContentsBox)`
   margin-left: auto;
   margin-bottom: 0;
+  @media (max-width: 750px) {
+    margin: 0;
+  }
 `;
 
 export default {

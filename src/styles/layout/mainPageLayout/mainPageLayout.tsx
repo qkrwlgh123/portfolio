@@ -6,7 +6,6 @@ const MainPageLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <Style.Container>
-        <Header />
         <Style.InnerBox>{children}</Style.InnerBox>
       </Style.Container>
       <Footer />

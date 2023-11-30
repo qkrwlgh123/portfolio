@@ -15,6 +15,9 @@ const FooterInnerBox = styled.div`
     height: 80px;
     padding: 20px;
     font-size: 16px;
+    @media (max-width: 600px) {
+      font-size: 12px;
+    }
     color: #fff;
   }
 `;

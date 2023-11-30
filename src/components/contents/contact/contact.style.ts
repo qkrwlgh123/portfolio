@@ -4,8 +4,12 @@ const ContactContainer = styled.div`
   margin-top: 100px;
   display: flex;
   justify-content: space-between;
-  width: 64%;
+  width: 85%;
   padding-bottom: 130px;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const ContactIntroBox = styled.div`
@@ -28,6 +32,32 @@ const ContactIntroBox = styled.div`
   }
   svg {
     margin-left: 7px;
+  }
+  @media (max-width: 1000px) {
+    display: none;
+  }
+`;
+
+const MobileContactIntroBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  font-size: 28px;
+  margin-bottom: 25px;
+  h2 {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    svg {
+      margin-left: 10px;
+    }
+  }
+  span {
+    font-size: 20px;
+  }
+  @media (min-width: 1000px) {
+    display: none;
   }
 `;
 
@@ -60,6 +90,9 @@ const SendEmailBox = styled.div`
       outline: none;
     }
   }
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
 `;
 
 const SubmitButton = styled.button`
@@ -77,6 +110,7 @@ const SubmitButton = styled.button`
 export default {
   ContactContainer,
   ContactIntroBox,
+  MobileContactIntroBox,
   ImageBox,
   SendEmailBox,
   SubmitButton,

@@ -15,6 +15,11 @@ const ProjectBox = styled.div<{ isInViewport: boolean }>`
   img {
     width: 100%;
     height: 100%;
+    object-fit: fill;
+  }
+  @media (max-width: 650px) {
+    width: 160px;
+    height: 140px;
   }
 `;
 

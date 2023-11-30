@@ -8,7 +8,7 @@ const HoveredProjectBox = styled.div`
   align-items: center;
   position: absolute;
   background-color: #000000;
-  opacity: 0.5;
+  opacity: 0.7;
 `;
 
 const InnerBox = styled.div`
@@ -21,6 +21,10 @@ const InnerBox = styled.div`
   z-index: 999;
   color: #ececec;
   font-size: 16px;
+  @media (max-width: 650px) {
+    font-size: 11px;
+    text-align: center;
+  }
 `;
 
 export default { HoveredProjectBox, InnerBox };
