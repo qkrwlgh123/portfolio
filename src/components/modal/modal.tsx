@@ -1,6 +1,7 @@
 import Style from './modal.style';
 import { ProjectDataType } from '../contents/projects/projectsList/projectsListData';
 import { FaCheck } from 'react-icons/fa';
+import { IoClose } from 'react-icons/io5';
 import { useEffect, useRef } from 'react';
 
 const Modal = (props: ProjectDataType) => {
@@ -33,6 +34,9 @@ const Modal = (props: ProjectDataType) => {
   return (
     <Style.ModalBackground>
       <Style.ModalInnerBox ref={modalRef}>
+        <Style.CloseIconBox onClick={props.handleOpenModal}>
+          <IoClose />
+        </Style.CloseIconBox>
         <Style.TitleBox>
           <div>
             <h1>{props.title}</h1>
